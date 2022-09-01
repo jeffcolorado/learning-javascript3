@@ -1,0 +1,17 @@
+<html>
+    <label for="edad">Cual es su edad?</label>
+    <input type="number" id="edad">
+    <button onclick="bucle()"> Ejecutar </button>
+</html>
+    <script>
+    function bucle(){
+        let edad = document.getElementById("edad").value
+        for ( i = 1; i <= edad ; i++ ){
+            if (i === 1){
+                document.write(i+" año."+"<br>")
+            }else{
+                document.write(i+" años."+"<br>")
+            }
+        }
+    }
+    </script>

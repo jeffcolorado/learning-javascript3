@@ -1,0 +1,18 @@
+<html>
+    <Label for="n"> Por favor ingrese un número </Label>
+    <input type="number" id="numero">
+    <button onclick="bucle()"> Ejecutar </button>
+</html>
+<script>
+    function bucle(){
+        let n = (document.getElementById("numero").value)
+
+        if (n <= 3){
+            alert("El número debe ser mayor que 3")
+        }else{
+            for ( i = 0 ; i <= n ; i++ ){
+                document.write(i + "<br>")
+            }
+        }
+    }
+</script>

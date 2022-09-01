@@ -1,0 +1,41 @@
+<html>
+    <label for="n"> Ingrese un número entero </label>
+    <input type="number" id="n">
+    <button onclick="primo()"> Ejecutar </button>
+</html>
+
+<script>
+    function primo(){
+        // Almaceno el valor del input en la variable n y convierto el valor en flotante
+        let n = parseFloat(document.getElementById("n").value)
+
+        // Declaro un contador
+        let cont = 0
+
+        //Compruebo si el número es entero
+        if(Number.isInteger(n) === true){ 
+
+            //mientras que i sea menor que n hacer
+            let i = 1
+            while (i <= n){
+
+                //si modulo de n dividido i = 0 entonces el contador se aumenta.
+                if (n % i === 0){
+                    contador = contador + 1
+                }
+                i++
+            }
+
+            //Una vez culminado el ciclo, si el contador es igual a 2 entonces n será primo
+            if (contador === 2){
+                document.write(n +" es un número primo.")
+            }else{
+                document.write(n +" no es un número primo.")
+            }
+        
+         //Si no es entero entonces  
+        }else{
+            alert("no se aceptan números decimales")
+        }
+    }
+</script>

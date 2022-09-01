@@ -1,0 +1,24 @@
+<html>
+    <label for="capital">Ingrese la capital de Francia</label>
+    <input type="text" id="capital">
+    <button onclick="bucle()"> Ejecutar </button>
+</html>
+
+<script>
+    function bucle(){
+        let capital = document.getElementById("capital").value;
+        
+        let intentos = 0
+
+        if ((capital != "paris") || (capital != "PARIS") || (capital != "Paris")){
+            for (i = 0; i < 3; i++){
+                intentos++
+                alert("respuesta incorrecta")
+                if (intentos === 3){
+                    alert("Se acabaron los intentos")
+                }
+            }
+        }
+        
+    }
+</script>
